@@ -6,16 +6,11 @@ class Background extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
-        children: [
-          const Expanded(child: SizedBox()),
-          Container(
-            height: MediaQuery.of(context).size.height * 0.3,
-            color: AppTheme.primary,
-          )
-        ],
-      ),
+    return Column(
+      children: [
+        SizedBox(height: MediaQuery.of(context).size.height * 0.5),
+        Expanded(child: Container(color: AppTheme.primary)),
+      ],
     );
   }
 }

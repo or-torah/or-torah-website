@@ -12,7 +12,7 @@ class Home extends StatelessWidget {
       body: Stack(
         children: [
           Background(),
-          SlideShow(),
+          Slideshow(),
           HomePageButtons(),
         ],
       ),
