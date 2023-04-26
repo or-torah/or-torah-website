@@ -1,8 +1,9 @@
 import 'pages.dart';
-import 'package:or_torah_website/pages/home/home_page_buttons.dart';
+import 'package:or_torah_website/pages/home/buttons/buttons.dart';
 import 'package:or_torah_website/pages/home/slideshow/slideshow.dart';
 
 class Home extends StatelessWidget {
+  static const double topSectionHeight = 550;
   const Home({super.key});
 
   @override
@@ -11,9 +12,9 @@ class Home extends StatelessWidget {
       appBar: Header(),
       body: Stack(
         children: [
-          Background(),
-          Slideshow(),
-          HomePageButtons(),
+          Background(topSectionHeight: topSectionHeight),
+          Slideshow(height: topSectionHeight + 100),
+          Buttons(topOffset: topSectionHeight - 10),
         ],
       ),
     );
