@@ -7,11 +7,6 @@ class Background extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(height: topSectionHeight),
-        Expanded(child: Container(color: AppTheme.primary)),
-      ],
-    );
+    return Container(color: AppTheme.secondary, height: topSectionHeight);
   }
 }

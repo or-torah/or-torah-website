@@ -7,17 +7,15 @@ class Buttons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      top: topOffset,
-      left: 0,
-      right: 0,
-      child: const SizedBox(
-        width: double.infinity,
+    return SizedBox(
+      width: double.infinity,
+      child: Padding(
+        padding: EdgeInsets.only(top: topOffset),
         child: Wrap(
           alignment: WrapAlignment.center,
           spacing: 40,
           runSpacing: 20,
-          children: [Button(), Button(), Button()],
+          children: const [Button(), Button(), Button()],
         ),
       ),
     );

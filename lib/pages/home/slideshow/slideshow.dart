@@ -13,9 +13,9 @@ class Slideshow extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: SizedBox(
         height: height,
-        child: const Row(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
+          children: const [
             SlideshowButton(icon: Icons.arrow_back_ios_new),
             SlideshowBody(),
             SlideshowButton(icon: Icons.arrow_forward_ios),
