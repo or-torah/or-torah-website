@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:or_torah_website/themes/app_theme.dart';
 
 class Header extends StatelessWidget implements PreferredSizeWidget {
   static const double height = 150;
@@ -10,7 +11,7 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.cyanAccent,
+      color: AppTheme.secondary,
       height: height,
     );
   }
