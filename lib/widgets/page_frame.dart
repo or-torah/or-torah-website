@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:or_torah_website/themes/app_theme.dart';
 
-import 'footer.dart';
 import 'header.dart';
 
 class PageFrame extends StatelessWidget {
@@ -10,14 +9,16 @@ class PageFrame extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTextStyle(
-      style: AppTheme.font,
-      child: SingleChildScrollView(
-        child: Container(
-          constraints: BoxConstraints(
-            minHeight: MediaQuery.of(context).size.height,
-          ),
-          child: Column(children: [const Header(), page, const Footer()]),
+    return Scaffold(
+      backgroundColor: AppTheme.primary,
+      body: DefaultTextStyle(
+        style: AppTheme.font,
+        child: CustomScrollView(
+          slivers: [
+            const Header(),
+            page,
+            // const Footer(),
+          ],
         ),
       ),
     );
