@@ -15,7 +15,26 @@ class Buttons extends StatelessWidget {
           alignment: WrapAlignment.center,
           spacing: 40,
           runSpacing: 20,
-          children: const [Button(), Button(), Button()],
+          children: const [
+            Button(
+              icon: Icons.play_circle_fill,
+              title: 'Conferencias',
+              description:
+                  'Ea anim commodo consequat nisi in culpa enim ipsum consequat.',
+            ),
+            Button(
+              icon: Icons.calendar_today,
+              title: 'Templo',
+              description:
+                  'Ea anim commodo consequat nisi in culpa enim ipsum consequat.',
+            ),
+            Button(
+              icon: Icons.menu_book,
+              title: 'Libros Shem Tov',
+              description:
+                  'Ea anim commodo consequat nisi in culpa enim ipsum consequat.',
+            )
+          ],
         ),
       ),
     );
