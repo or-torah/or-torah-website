@@ -8,7 +8,7 @@ class Slides extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.8,
+      width: MediaQuery.of(context).size.width * 0.88,
       child: CarouselSlider(
         carouselController: controller,
         options: CarouselOptions(
