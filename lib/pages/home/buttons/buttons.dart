@@ -11,11 +11,11 @@ class Buttons extends StatelessWidget {
       width: double.infinity,
       child: Padding(
         padding: EdgeInsets.only(top: topOffset),
-        child: Wrap(
+        child: const Wrap(
           alignment: WrapAlignment.center,
           spacing: 40,
           runSpacing: 20,
-          children: const [
+          children: [
             Button(
               icon: Icons.play_circle_fill,
               title: 'Conferencias',

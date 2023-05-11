@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:or_torah_website/themes/app_theme.dart';
+
+import 'button_content.dart';
 
 class Button extends StatelessWidget {
   final IconData icon;
@@ -31,46 +32,10 @@ class Button extends StatelessWidget {
             )
           ],
         ),
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Icon(
-                  icon,
-                  color: AppTheme.primary,
-                  size: 65,
-                ),
-
-                //?
-                DefaultTextStyle(
-                  style: GoogleFonts.merriweather(
-                    fontSize: 25,
-                    color: AppTheme.primary,
-                  ),
-                  child: Text(
-                    title,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 50),
-                  child: DefaultTextStyle(
-                    style: GoogleFonts.merriweather(
-                      fontSize: 13,
-                      color: AppTheme.primary,
-                      fontWeight: FontWeight.w300,
-                    ),
-                    child: Text(
-                      description,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+        child: ButtonContent(
+          icon: icon,
+          title: title,
+          description: description,
         ),
       ),
     );
