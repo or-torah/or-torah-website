@@ -10,13 +10,19 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: AppTheme.primary,
-      child: Stack(
-        children: [
-          const Background(topSectionHeight: topSectionHeight - 100),
-          Slideshow(height: topSectionHeight + 10),
-          const Buttons(topOffset: topSectionHeight - 70),
+    return SliverList(
+      delegate: SliverChildListDelegate(
+        [
+          Container(
+            color: AppTheme.primary,
+            child: Stack(
+              children: [
+                const Background(topSectionHeight: topSectionHeight - 100),
+                Slideshow(height: topSectionHeight + 10),
+                const Buttons(topOffset: topSectionHeight - 70),
+              ],
+            ),
+          ),
         ],
       ),
     );
