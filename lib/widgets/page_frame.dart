@@ -1,22 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:or_torah_website/themes/app_theme.dart';
 
 import 'header/header_app_bar.dart';
 
 class PageFrame extends StatelessWidget {
   final Widget page;
-  const PageFrame({super.key, required this.page});
+  final ThemeData? headerTheme;
+  final ThemeData? pageTheme;
+  const PageFrame({
+    super.key,
+    required this.page,
+    this.headerTheme,
+    this.pageTheme,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppTheme.primary,
-      body: DefaultTextStyle(
-        style: AppTheme.font,
-        child: CustomScrollView(
+    ThemeData defaultTheme = Theme.of(context);
+    return Theme(
+      data: pageTheme ?? defaultTheme,
+      child: Scaffold(
+        body: CustomScrollView(
           slivers: [
-            const HeaderAppBar(),
-            page,
+            Theme(
+              data: headerTheme ?? defaultTheme,
+              child: const HeaderAppBar(),
+            ),
+            SliverList(delegate: SliverChildListDelegate([page]))
             // const Footer(),
           ],
         ),
