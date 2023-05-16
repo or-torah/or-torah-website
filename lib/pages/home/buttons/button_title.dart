@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:or_torah_website/themes/app_theme.dart';
 
 class ButtonTitle extends StatelessWidget {
   const ButtonTitle({
@@ -13,10 +12,7 @@ class ButtonTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: AppTheme.font.copyWith(
-        fontSize: 20,
-        fontWeight: FontWeight.w600,
-      ),
+      style: Theme.of(context).textTheme.headlineMedium,
     );
   }
 }

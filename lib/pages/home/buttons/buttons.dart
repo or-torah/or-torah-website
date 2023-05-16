@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:or_torah_website/pages/home/buttons/button.dart';
+import 'package:or_torah_website/themes/app_theme.dart';
+
+import 'buttons_wrap.dart';
 
 class Buttons extends StatelessWidget {
   final double topOffset;
@@ -11,30 +13,9 @@ class Buttons extends StatelessWidget {
       width: double.infinity,
       child: Padding(
         padding: EdgeInsets.only(top: topOffset),
-        child: const Wrap(
-          alignment: WrapAlignment.center,
-          spacing: 40,
-          runSpacing: 20,
-          children: [
-            Button(
-              icon: Icons.play_circle_fill,
-              title: 'Conferencias',
-              description:
-                  'Ea anim commodo consequat nisi in culpa enim ipsum consequat.',
-            ),
-            Button(
-              icon: Icons.calendar_today,
-              title: 'Templo',
-              description:
-                  'Ea anim commodo consequat nisi in culpa enim ipsum consequat.',
-            ),
-            Button(
-              icon: Icons.menu_book,
-              title: 'Libros Shem Tov',
-              description:
-                  'Ea anim commodo consequat nisi in culpa enim ipsum consequat.',
-            )
-          ],
+        child: Theme(
+          data: const AppTheme().lightTheme,
+          child: const ButtonsWrap(),
         ),
       ),
     );

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:or_torah_website/themes/app_theme.dart';
 
 import 'button_description.dart';
 import 'button_title.dart';
@@ -25,11 +24,7 @@ class ButtonContent extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Icon(
-              icon,
-              color: AppTheme.primary,
-              size: 65,
-            ),
+            Icon(icon, size: 65),
             ButtonTitle(title: title),
             ButtonDescription(description: description),
           ],

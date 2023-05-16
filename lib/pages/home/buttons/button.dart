@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:or_torah_website/themes/app_theme.dart';
 
 import 'button_content.dart';
 
@@ -17,27 +16,32 @@ class Button extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ThemeData theme = Theme.of(context);
     return SizedBox(
       width: 350,
       height: 210,
       child: Container(
-        decoration: BoxDecoration(
-          color: AppTheme.secondary,
-          boxShadow: const [
-            BoxShadow(
-              color: Color.fromARGB(90, 0, 0, 0),
-              spreadRadius: 3,
-              blurRadius: 20,
-              offset: Offset(0.0, 0.0),
-            )
-          ],
-        ),
+        decoration: shadow(theme),
         child: ButtonContent(
           icon: icon,
           title: title,
           description: description,
         ),
       ),
+    );
+  }
+
+  BoxDecoration shadow(ThemeData theme) {
+    return BoxDecoration(
+      color: theme.cardColor,
+      boxShadow: [
+        BoxShadow(
+          color: theme.shadowColor,
+          spreadRadius: 3,
+          blurRadius: 20,
+          offset: const Offset(0.0, 0.0),
+        )
+      ],
     );
   }
 }
