@@ -12,7 +12,7 @@ class ButtonTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: Theme.of(context).textTheme.headlineMedium,
+      style: Theme.of(context).textTheme.titleLarge,
     );
   }
 }

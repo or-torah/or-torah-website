@@ -24,7 +24,7 @@ class AppTheme {
   }
 
   ThemeData get darkTheme {
-    return ThemeData.dark().copyWith(
+    return baseTheme(ThemeData.dark()).copyWith(
       appBarTheme: darkAppBar,
       colorScheme: darkColorScheme,
     );
