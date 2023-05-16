@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:or_torah_website/themes/app_theme.dart';
 
-import 'header.dart';
+import 'header/header_app_bar.dart';
 
 class PageFrame extends StatelessWidget {
   final Widget page;
@@ -15,7 +15,7 @@ class PageFrame extends StatelessWidget {
         style: AppTheme.font,
         child: CustomScrollView(
           slivers: [
-            const Header(),
+            const HeaderAppBar(),
             page,
             // const Footer(),
           ],
