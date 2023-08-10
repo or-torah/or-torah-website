@@ -10,7 +10,7 @@ class ContactButton extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         child: Text(
           'Contacto',
-          style: Theme.of(context).textTheme.titleLarge,
+          style: Theme.of(context).textTheme.titleLarge, // TODO: quitar el bold
         ),
       ),
       onPressed: () {},

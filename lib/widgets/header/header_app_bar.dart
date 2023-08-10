@@ -12,6 +12,7 @@ class HeaderAppBar extends StatelessWidget {
       collapsedHeight: 60,
       expandedHeight: 130,
       flexibleSpace: Center(child: Header()),
+      automaticallyImplyLeading: false,
     );
   }
 }

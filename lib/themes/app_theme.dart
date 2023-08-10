@@ -6,6 +6,7 @@ class AppTheme {
   static const Color white = Color(0xffF2F2F2);
   static const Color darkOrange = Color(0xffea5830);
   static const Color lightOrange = Color(0xfff5a32e);
+  static const Color brown = Color(0xff432918);
   const AppTheme();
 
   ThemeData baseTheme(ThemeData initial) {
@@ -20,6 +21,7 @@ class AppTheme {
       appBarTheme: lightAppBar,
       colorScheme: lightColorScheme,
       textButtonTheme: lightTextButton,
+      textTheme: lightTextTheme,
     );
   }
 
@@ -32,6 +34,15 @@ class AppTheme {
 
   TextTheme get textTheme {
     return GoogleFonts.merriweatherTextTheme();
+  }
+
+  TextTheme get lightTextTheme {
+    return textTheme.copyWith(
+      titleLarge: textTheme.titleLarge?.copyWith(
+        color: brown,
+        fontWeight: FontWeight.bold,
+      ),
+    );
   }
 
   ColorScheme get _baseColorScheme {

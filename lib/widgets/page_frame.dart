@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'header/header_app_bar.dart';
+import 'menu/menu.dart';
 
 class PageFrame extends StatelessWidget {
   final Widget page;
@@ -19,10 +20,11 @@ class PageFrame extends StatelessWidget {
     return Theme(
       data: pageTheme ?? defaultTheme,
       child: Scaffold(
+        drawer: const Menu(),
         body: CustomScrollView(
           slivers: [
             Theme(
-              data: headerTheme ?? defaultTheme,
+              data: headerTheme ?? pageTheme ?? defaultTheme,
               child: const HeaderAppBar(),
             ),
             SliverList(delegate: SliverChildListDelegate([page]))
