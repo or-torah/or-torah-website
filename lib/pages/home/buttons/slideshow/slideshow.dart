@@ -1,14 +1,13 @@
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:or_torah_website/pages/home/slideshow/slides.dart';
 import 'package:or_torah_website/pages/home/slideshow/slideshow_button.dart';
 
-import 'slides.dart';
 
 class Slideshow extends StatelessWidget {
   final double height;
-  final bool wide;
   final CarouselController controller = CarouselController();
-  Slideshow({super.key, required this.height, this.wide = true});
+  Slideshow({super.key, required this.height});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +24,7 @@ class Slideshow extends StatelessWidget {
                 icon: Icons.arrow_back_ios_new,
                 function: controller.previousPage,
               ),
-              Slides(controller: controller, wide: wide),
+              Slides(controller: controller),
               SlideshowButton(
                 icon: Icons.arrow_forward_ios,
                 function: controller.nextPage,
