@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'overlay_content.dart';
+
 class SlideshowOverlay extends StatelessWidget {
   final bool wide;
 
@@ -13,6 +15,7 @@ class SlideshowOverlay extends StatelessWidget {
         heightFactor: wide ? 1 : 0.4,
         child: Container(
           color: const Color.fromARGB(77, 245, 245, 245),
+          child: const OverlayContent(),
         ),
       );
     });
