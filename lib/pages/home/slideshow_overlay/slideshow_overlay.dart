@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 import 'overlay_content.dart';
 
 class SlideshowOverlay extends StatelessWidget {
@@ -16,6 +17,7 @@ class SlideshowOverlay extends StatelessWidget {
         child: Container(
           color: const Color.fromARGB(77, 245, 245, 245),
           child: const OverlayContent(),
+
         ),
       );
     });
