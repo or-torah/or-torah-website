@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-class BodyListtile extends StatelessWidget {
+class BodyListTile extends StatelessWidget {
   final String title;
+  final String route;
   final bool autofocus;
-  const BodyListtile({super.key, required this.title, this.autofocus = false});
+  const BodyListTile(
+      {super.key,
+      required this.title,
+      required this.route,
+      this.autofocus = false});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +33,7 @@ class BodyListtile extends StatelessWidget {
                 ),
               ),
             ),
-            onTap: () => {},
+            onTap: () => context.go(route),
           ),
         ),
       ),

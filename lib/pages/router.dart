@@ -13,6 +13,14 @@ final router = GoRouter(
         headerTheme: const AppTheme().lightTheme,
         pageTheme: const AppTheme().darkTheme,
       ),
-    )
+    ),
+    GoRoute(
+      path: '/contacto',
+      builder: (context, state) => PageFrame(
+        page: const Contact(),
+        headerTheme: const AppTheme().darkTheme,
+        pageTheme: const AppTheme().darkTheme,
+      ),
+    ),
   ],
 );

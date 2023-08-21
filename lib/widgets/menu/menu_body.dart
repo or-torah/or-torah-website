@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'body_listtile.dart';
+import 'body_list_tile.dart';
 
 class MenuBody extends StatelessWidget {
   const MenuBody({super.key});
@@ -9,17 +9,17 @@ class MenuBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        BodyListtile(title: 'Home', autofocus: true),
-        BodyListtile(title: 'Conferencias'),
-        BodyListtile(title: 'Templo'),
-        BodyListtile(title: 'Libros Shem Tob'),
-        BodyListtile(title: 'Donativos'),
+        BodyListTile(title: 'Home', route: '/', autofocus: true),
+        BodyListTile(title: 'Conferencias', route: '/conferencias'),
+        BodyListTile(title: 'Templo', route: '/templo'),
+        BodyListTile(title: 'Libros Shem Tob', route: '/shem-tob'),
+        BodyListTile(title: 'Donativos', route: '/donativos'),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 20),
           child: Divider(color: Colors.grey, thickness: 0.3),
         ),
-        BodyListtile(title: 'Contacto'),
-        BodyListtile(title: 'Información'),
+        BodyListTile(title: 'Contacto', route: '/contacto'),
+        BodyListTile(title: 'Información', route: '/informacion'),
       ],
     );
   }
