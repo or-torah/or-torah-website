@@ -1,8 +1,8 @@
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:or_torah_website/pages/home/slideshow/slideshow_button.dart';
 
-import 'slides.dart';
+import 'slides_frame.dart';
+import 'slideshow_button.dart';
 
 class Slideshow extends StatelessWidget {
   final double height;
@@ -25,7 +25,7 @@ class Slideshow extends StatelessWidget {
                 icon: Icons.arrow_back_ios_new,
                 function: controller.previousPage,
               ),
-              Slides(controller: controller, wide: wide),
+              SlidesFrame(controller: controller, wide: wide),
               SlideshowButton(
                 icon: Icons.arrow_forward_ios,
                 function: controller.nextPage,

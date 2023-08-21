@@ -1,0 +1,31 @@
+import 'package:flutter/material.dart';
+
+import 'donate_button.dart';
+import 'overlay_text.dart';
+import 'overlay_title.dart';
+
+class HorizontalContent extends StatelessWidget {
+  const HorizontalContent({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Padding(
+      padding: EdgeInsets.fromLTRB(50, 20, 50, 0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Expanded(child: OverlayTitle()),
+              DonateButton(),
+            ],
+          ),
+          SizedBox(height: 20),
+          Expanded(
+            child: OverlayText(),
+          ),
+        ],
+      ),
+    );
+  }
+}
