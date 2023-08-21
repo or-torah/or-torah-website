@@ -11,7 +11,9 @@ class MenuButton extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: IconButton(
         icon: const Icon(Icons.menu),
-        onPressed: () {},
+        onPressed: () {
+          Scaffold.of(context).openDrawer();
+        },
       ),
     );
   }
