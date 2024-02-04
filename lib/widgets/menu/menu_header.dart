@@ -6,7 +6,7 @@ class MenuHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 210,
+      height: 250,
       child: Theme(
         data: Theme.of(context).copyWith(
           dividerTheme: const DividerThemeData(color: Colors.transparent),
