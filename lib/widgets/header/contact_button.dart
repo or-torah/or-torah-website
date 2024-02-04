@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ContactButton extends StatelessWidget {
   const ContactButton({super.key});
@@ -13,7 +14,9 @@ class ContactButton extends StatelessWidget {
           style: Theme.of(context).textTheme.titleLarge, // TODO: quitar el bold
         ),
       ),
-      onPressed: () {},
+      onPressed: () {
+        context.go('/contacto');
+      },
     );
   }
 }

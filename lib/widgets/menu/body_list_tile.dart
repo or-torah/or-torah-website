@@ -18,7 +18,6 @@ class BodyListTile extends StatelessWidget {
       child: Card(
         shadowColor: Colors.transparent,
         child: Material(
-          type: MaterialType.transparency,
           child: ListTile(
             focusColor: const Color.fromARGB(199, 243, 243, 243),
             autofocus: autofocus,

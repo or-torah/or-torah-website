@@ -11,18 +11,20 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, constraints) {
-      final bool wide = constraints.maxWidth > 900;
-      return Theme(
-        data: const AppTheme().lightTheme,
-        child: Stack(
-          children: [
-            const TopBackground(topSectionHeight: topSectionHeight - 100),
-            Slideshow(height: topSectionHeight + 10, wide: wide),
-            Buttons(topOffset: topSectionHeight + (wide ? -70 : 70)),
-          ],
-        ),
-      );
-    });
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final bool wide = constraints.maxWidth > 900;
+        return Theme(
+          data: const AppTheme().lightTheme,
+          child: Stack(
+            children: [
+              const TopBackground(topSectionHeight: topSectionHeight - 100),
+              Slideshow(height: topSectionHeight + 10, wide: wide),
+              Buttons(topOffset: topSectionHeight + (wide ? -70 : 70)),
+            ],
+          ),
+        );
+      },
+    );
   }
 }
