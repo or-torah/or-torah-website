@@ -27,7 +27,13 @@ class PageFrame extends StatelessWidget {
               data: headerTheme ?? pageTheme ?? defaultTheme,
               child: const HeaderAppBar(),
             ),
-            SliverList(delegate: SliverChildListDelegate([page]))
+            SliverList(
+              delegate: SliverChildListDelegate(
+                [
+                  page,
+                ],
+              ),
+            )
             // const Footer(),
           ],
         ),

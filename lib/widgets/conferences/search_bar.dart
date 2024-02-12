@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:or_torah_website/widgets/conferences/filter_button.dart';
 
@@ -6,19 +8,13 @@ class Searchbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        SizedBox(
-          width: 500,
-          child: SearchBar(
-            leading: Icon(Icons.search),
-            hintText: 'Search for a conference',
-          ),
-        ),
-        FilterButton(),
-        SizedBox(width: 90),
-      ],
+    return ConstrainedBox(
+      constraints: const BoxConstraints(maxWidth: 500),
+      child: const SearchBar(
+        leading: Icon(Icons.search),
+        hintText: 'Search for a conference',
+        trailing: [FilterButton()],
+      ),
     );
   }
 }
