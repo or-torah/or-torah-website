@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:or_torah_website/widgets/conferences/filter_button.dart';
 
