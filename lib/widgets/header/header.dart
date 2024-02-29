@@ -13,8 +13,8 @@ class Header extends StatelessWidget {
       children: [
         MenuButton(),
         Expanded(flex: 20, child: Logo()),
-        ContactButton(),
-        Expanded(flex: 1, child: SizedBox()),
+        // ContactButton(),
+        // Expanded(flex: 1, child: SizedBox()),
       ],
     );
   }

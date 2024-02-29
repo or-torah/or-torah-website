@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'button.dart';
 
@@ -40,9 +41,18 @@ class ButtonsWrap extends StatelessWidget {
             description:
                 'Ea anim commodo consequat nisi in culpa enim ipsum consequat.',
           ),
-          onTap: () => context.go('/libros'),
+          onTap: () => _launchURL('https://www.shemtobmexico.com/'),
         )
       ],
     );
+  }
+
+  Future<void> _launchURL(String url) async {
+    final uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    } else {
+      throw 'No se pudo abrir $url';
+    }
   }
 }

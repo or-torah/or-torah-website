@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class DonateButton extends StatelessWidget {
   const DonateButton({super.key});
@@ -34,7 +35,7 @@ class DonateButton extends StatelessWidget {
             fontWeight: FontWeight.normal,
           ),
         ),
-        onPressed: () => {},
+        onPressed: () => context.go('/donativos'),
       ),
     );
   }

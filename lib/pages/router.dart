@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:or_torah_website/pages/conferences/conferences.dart';
+import 'package:or_torah_website/pages/donations/donations.dart';
 import 'package:or_torah_website/themes/app_theme.dart';
 import 'package:or_torah_website/widgets/page_frame.dart';
 
@@ -27,6 +28,14 @@ final router = GoRouter(
       path: '/conferencias',
       builder: (context, state) => PageFrame(
         page: const Conferences(),
+        headerTheme: const AppTheme().lightTheme,
+        pageTheme: const AppTheme().lightTheme,
+      ),
+    ),
+    GoRoute(
+      path: '/donativos',
+      builder: (context, state) => PageFrame(
+        page: const Donations(),
         headerTheme: const AppTheme().lightTheme,
         pageTheme: const AppTheme().darkTheme,
       ),

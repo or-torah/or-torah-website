@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class BodyListTile extends StatelessWidget {
   final String title;
@@ -32,10 +33,25 @@ class BodyListTile extends StatelessWidget {
                 ),
               ),
             ),
-            onTap: () => context.go(route),
+            onTap: () async {
+              if (route.startsWith('http')) {
+                await _launchURL(route);
+              } else {
+                context.go(route);
+              }
+            },
           ),
         ),
       ),
     );
+  }
+
+  Future<void> _launchURL(String url) async {
+    final uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    } else {
+      throw 'No se pudo abrir $url';
+    }
   }
 }

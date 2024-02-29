@@ -17,10 +17,31 @@ class Menu extends StatelessWidget {
         widthFactor: 0.7,
         child: Container(
           color: Colors.white,
-          child: ListView(
-            children: const [
-              MenuHeader(),
-              MenuBody(),
+          child: Column(
+            children: [
+              Expanded(
+                child: ListView(
+                  children: const [
+                    MenuHeader(),
+                    MenuBody(),
+                  ],
+                ),
+              ),
+              const Wrap(
+                children: [
+                  Icon(Icons.phone, color: Colors.grey),
+                  Text(
+                    ' 123-456-7890 | ',
+                    style: TextStyle(color: Colors.grey),
+                  ),
+                  Icon(Icons.email, color: Colors.grey),
+                  Text(
+                    ' example@gmail.com',
+                    style: TextStyle(color: Colors.grey),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 10),
             ],
           ),
         ),

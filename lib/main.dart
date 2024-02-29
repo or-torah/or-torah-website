@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       routerConfig: router,
       debugShowCheckedModeBanner: false,
       title: 'Or Torah',
-      theme: const AppTheme().darkTheme,
+      theme: const AppTheme().lightTheme,
     );
   }
 }
