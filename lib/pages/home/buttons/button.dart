@@ -33,7 +33,7 @@ class Button extends StatelessWidget {
 
   BoxDecoration shadow(ThemeData theme) {
     return BoxDecoration(
-      color: theme.cardColor,
+      color: const Color.fromARGB(255, 245, 245, 245),
       boxShadow: [
         BoxShadow(
           color: theme.shadowColor,

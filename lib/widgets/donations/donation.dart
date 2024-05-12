@@ -11,7 +11,9 @@ class Donation extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          showAlertDialog(context);
+        },
         child: Stack(
           alignment: Alignment.center,
           children: [
@@ -41,6 +43,41 @@ class Donation extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+// TODO hacerlo widget
+  showAlertDialog(BuildContext context) {
+    // set up the buttons
+    Widget cancelButton = TextButton(
+      child: const Text("Cancel"),
+      onPressed: () => Navigator.pop(context),
+    );
+    Widget continueButton = TextButton(
+      child: const Text("Continue"),
+      onPressed: () {},
+    );
+
+    // set up the AlertDialog
+    AlertDialog alert = AlertDialog(
+      alignment: Alignment.center,
+      title: const Text("AlertDialog"),
+      content: const Text(
+          "Would you like to continue learning how to use Flutter alerts?"),
+      actions: [
+        cancelButton,
+        continueButton,
+      ],
+    );
+
+    // show the dialog
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return Dialog(
+          child: Text("Hello World"),
+        );
+      },
     );
   }
 }

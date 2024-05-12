@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// TODO hacer theme de titulo y subtitulo
 class AppTheme {
   static const Color black = Color(0xff26272D);
   static const Color white = Colors.white;
@@ -51,13 +52,13 @@ class AppTheme {
 
   ColorScheme get lightColorScheme {
     return _baseColorScheme.copyWith(
-      background: white,
+      surface: white,
     );
   }
 
   ColorScheme get darkColorScheme {
     return _baseColorScheme.copyWith(
-      background: black,
+      surface: black,
     );
   }
 
