@@ -18,19 +18,22 @@ class Schedule extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 10),
-        Card(
-          elevation: 15,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: SizedBox(
-            width: 380,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10.0),
-              child: Column(
-                children: schedule.sections
-                    .map((section) => ScheduleSection(section))
-                    .toList(),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 30),
+          child: Card(
+            elevation: 15,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: SizedBox(
+              width: 380,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10.0),
+                child: Column(
+                  children: schedule.sections
+                      .map((section) => ScheduleSection(section))
+                      .toList(),
+                ),
               ),
             ),
           ),

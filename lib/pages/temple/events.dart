@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// TODO: Flyers responsive
 class Events extends StatelessWidget {
   const Events({super.key});
 

@@ -17,14 +17,6 @@ final router = GoRouter(
         pageTheme: const AppTheme().darkTheme,
       ),
     ),
-    // GoRoute(
-    //   path: '/contacto',
-    //   builder: (context, state) => PageFrame(
-    //     page: const Contact(),
-    //     headerTheme: const AppTheme().darkTheme,
-    //     pageTheme: const AppTheme().darkTheme,
-    //   ),
-    // ),
     GoRoute(
       path: '/conferencias',
       builder: (context, state) => PageFrame(
@@ -43,11 +35,12 @@ final router = GoRouter(
     ),
     GoRoute(
       path: '/templo',
-      builder: (context, state) => PageFrame(
-        page: const Temple(),
-        headerTheme: const AppTheme().lightTheme,
-        pageTheme: const AppTheme().darkTheme,
-      ),
+      builder: (context, state) =>
+          // PageFrame( page:
+          const Temple(),
+      //   headerTheme: const AppTheme().lightTheme,
+      //   pageTheme: const AppTheme().darkTheme,
+      // ),
     ),
   ],
 );

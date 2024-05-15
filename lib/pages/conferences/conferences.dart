@@ -3,6 +3,8 @@ import 'package:or_torah_website/widgets/conferences/conference_list_tiles.dart'
 import 'package:or_torah_website/widgets/conferences/filter_bar.dart';
 import 'package:or_torah_website/widgets/conferences/search_bar.dart';
 
+// TODO: Add the fillter button
+// TODO: Remove filterbar in mobile view
 class Conferences extends StatelessWidget {
   const Conferences({super.key});
 

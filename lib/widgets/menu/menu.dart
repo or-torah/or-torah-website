@@ -5,6 +5,7 @@ import 'package:or_torah_website/widgets/menu/menu_body.dart';
 
 import 'menu_header.dart';
 
+// TODO: Add selected functionality to the menu items
 class Menu extends StatelessWidget {
   const Menu({super.key});
 

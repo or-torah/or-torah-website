@@ -10,9 +10,14 @@ class Header extends StatelessWidget {
     return const Row(
       children: [
         MenuButton(),
-        Expanded(flex: 20, child: Logo()),
+        Expanded(child: SizedBox()),
+        Padding(
+          padding: EdgeInsets.only(right: 15),
+          child: Logo(),
+        ),
+
+        // Expanded(flex: 20, child: Logo()),
         // ContactButton(),
-        // Expanded(flex: 1, child: SizedBox()),
       ],
     );
   }

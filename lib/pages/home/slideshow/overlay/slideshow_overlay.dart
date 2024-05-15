@@ -16,15 +16,17 @@ class SlideshowOverlay extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, constraints) {
-      return FractionallySizedBox(
-        widthFactor: wide ? 0.4 : 1,
-        heightFactor: wide ? 1 : 0.4,
-        child: Container(
-          color: color,
-          child: wide ? const VerticalContent() : const HorizontalContent(),
-        ),
-      );
-    });
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return FractionallySizedBox(
+          widthFactor: wide ? 0.4 : 1,
+          heightFactor: wide ? 1 : 0.4,
+          child: Container(
+            color: color,
+            child: wide ? const VerticalContent() : const HorizontalContent(),
+          ),
+        );
+      },
+    );
   }
 }

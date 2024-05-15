@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:or_torah_website/widgets/footer.dart';
 
 import 'header/header_app_bar.dart';
 import 'menu/menu.dart';
@@ -27,8 +28,8 @@ class PageFrame extends StatelessWidget {
               data: headerTheme ?? pageTheme ?? defaultTheme,
               child: const HeaderAppBar(),
             ),
-            SliverList(delegate: SliverChildListDelegate([page]))
-            // const Footer(),
+            SliverList(delegate: SliverChildListDelegate([page])),
+            // Footer(),
           ],
         ),
       ),
