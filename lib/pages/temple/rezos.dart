@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:or_torah_website/models/rezos/schedule_data_dummy.dart';
 import 'package:or_torah_website/widgets/rezos/schedule.dart';
 
-// TODO: Add padding to the borders of the schedule cards
 class Rezos extends StatelessWidget {
   const Rezos({super.key});
 

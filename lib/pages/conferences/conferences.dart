@@ -4,7 +4,6 @@ import 'package:or_torah_website/widgets/conferences/filter_bar.dart';
 import 'package:or_torah_website/widgets/conferences/search_bar.dart';
 
 // TODO: Add the fillter button
-// TODO: Remove filterbar in mobile view
 class Conferences extends StatelessWidget {
   const Conferences({super.key});
 
@@ -13,18 +12,20 @@ class Conferences extends StatelessWidget {
     return Center(
       child: ConstrainedBox(
         constraints: const BoxConstraints(maxWidth: 1500),
-        child: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
-              Align(
+              const Align(
                 alignment: Alignment.centerRight,
                 child: Searchbar(),
               ),
-              SizedBox(height: 35),
-              FilterBar(),
-              SizedBox(height: 35),
-              ConferenceListTiles(),
+              const SizedBox(height: 35),
+              MediaQuery.of(context).size.width < 600
+                  ? Container()
+                  : const FilterBar(),
+              const SizedBox(height: 35),
+              const ConferenceListTiles(),
             ],
           ),
         ),

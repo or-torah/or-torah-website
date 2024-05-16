@@ -8,27 +8,27 @@ class ConferenceTile extends StatelessWidget {
     return SizedBox(
       width: width,
       child: Padding(
-        padding: const EdgeInsets.all(2.5),
-        child: Padding(
-            padding: const EdgeInsets.all(15),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  width: 263,
-                  height: 151,
-                  color: const Color.fromARGB(255, 218, 217, 217),
+        padding: const EdgeInsets.all(15),
+        child: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                width: 263,
+                height: 151,
+                color: const Color.fromARGB(255, 218, 217, 217),
+              ),
+              const SizedBox(height: 10),
+              const Text(
+                "Titulo de la conferencia",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
                 ),
-                const SizedBox(height: 10),
-                const Text(
-                  "Titulo de la conferencia",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const Text("Rab de la conferencia"),
-              ],
-            )),
+              ),
+              const Text("Rab de la conferencia"),
+            ],
+          ),
+        ),
       ),
     );
   }

@@ -14,16 +14,11 @@ class HorizontalContent extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            children: [
-              Expanded(child: OverlayTitle()),
-              DonateButton(),
-            ],
-          ),
+          OverlayTitle(),
+          Text('Ad pariatur exercitation nostrud ut.',
+              style: TextStyle(fontSize: 15, color: Colors.grey)),
           SizedBox(height: 20),
-          Expanded(
-            child: OverlayText(),
-          ),
+          DonateButton(),
         ],
       ),
     );

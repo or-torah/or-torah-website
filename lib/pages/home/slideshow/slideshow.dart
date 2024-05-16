@@ -12,6 +12,7 @@ class Slideshow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool showArrows = MediaQuery.of(context).size.width >= 600;
     return Material(
       color: Colors.transparent,
       child: Padding(
@@ -20,17 +21,21 @@ class Slideshow extends StatelessWidget {
           height: height,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              SlideshowButton(
-                icon: Icons.arrow_back_ios_new,
-                function: controller.previousPage,
-              ),
-              SlidesFrame(controller: controller, wide: wide),
-              SlideshowButton(
-                icon: Icons.arrow_forward_ios,
-                function: controller.nextPage,
-              ),
-            ],
+            children: showArrows
+                ? [
+                    SlideshowButton(
+                      icon: Icons.arrow_back_ios_new,
+                      function: controller.previousPage,
+                    ),
+                    SlidesFrame(controller: controller, wide: wide),
+                    SlideshowButton(
+                      icon: Icons.arrow_forward_ios,
+                      function: controller.nextPage,
+                    ),
+                  ]
+                : [
+                    SlidesFrame(controller: controller, wide: wide),
+                  ],
           ),
         ),
       ),

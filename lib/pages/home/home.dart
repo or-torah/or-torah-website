@@ -4,7 +4,6 @@ import 'package:or_torah_website/widgets/split_background.dart';
 import 'buttons/buttons.dart';
 import 'slideshow/slideshow.dart';
 
-// TODO: Fix overlay on the slideshow and add padding to the arrow buttons
 // TODO: Fix splitbackground
 
 class Home extends StatelessWidget {
